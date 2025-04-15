@@ -12,7 +12,7 @@ export default function CTA() {
         <div className="absolute w-80 h-80 bg-primary/25 rounded-full top-1/2 right-10 blur-lg"></div>
         <div className="flex flex-col gap-4 relative z-10">
           <h2 className="text-4xl font-bold">{config.public.cta.title}</h2>
-          <p className="text-muted-foreground">{config.public.cta.description}</p>
+          <p className="text-muted-foreground text-lg">{config.public.cta.description}</p>
           <Button className="w-fit" size={"xl"} asChild>
             <Link href={config.public.cta.button.href}>{config.public.cta.button.label}</Link>
           </Button>

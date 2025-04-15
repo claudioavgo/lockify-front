@@ -8,11 +8,11 @@ export default function Bento() {
       <div className="w-full gap-8 flex flex-col xl:max-w-5xl">
         <div className="flex flex-col gap-4">
           <h2 className="text-4xl font-bold">{config.public.bento.title}</h2>
-          <p className="text-muted-foreground">{config.public.bento.description}</p>
+          <p className="text-muted-foreground text-lg">{config.public.bento.description}</p>
         </div>
-        <AnimatedGroup preset="scale" className="grid auto-rows-auto md:grid-cols-3 gap-4">
+        <AnimatedGroup preset="scale" className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {config.public.bento.items.map((item, i) => (
-            <BentoItem key={i} {...item} />
+            <BentoCard key={i} {...item} />
           ))}
         </AnimatedGroup>
       </div>
@@ -20,22 +20,17 @@ export default function Bento() {
   );
 }
 
-interface BentoItem {
+interface RecursoItem {
   title: string;
   description: string;
   image?: string;
 }
 
-const BentoItem = ({ title, description, image }: BentoItem) => {
+const BentoCard = ({ title, description, image }: RecursoItem) => {
   return (
-    <div className="row-span-1 rounded-xl border p-4 flex flex-col">
-      <div className="mb-2">
-        <h3 className="text-lg font-bold">{title}</h3>
-        <p className="text-sm text-muted-foreground">{description}</p>
-      </div>
-
+    <div className="rounded-xl border p-6 flex flex-col h-full">
       {image && (
-        <div className="mt-auto relative w-full aspect-video rounded-lg overflow-hidden">
+        <div className="mb-4 relative w-full aspect-video rounded-lg overflow-hidden">
           <Image
             src={image}
             alt={title}
@@ -44,6 +39,10 @@ const BentoItem = ({ title, description, image }: BentoItem) => {
           />
         </div>
       )}
+      <div>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-muted-foreground">{description}</p>
+      </div>
     </div>
   )
 }

@@ -50,7 +50,7 @@ export default function HamburgerDrawer() {
                 </Button>
               </DrawerClose>
             ))}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               <Button className="justify-start text-md w-full" size="xl" variant="default" asChild>
                 <Link href="/login">Login</Link>
               </Button>

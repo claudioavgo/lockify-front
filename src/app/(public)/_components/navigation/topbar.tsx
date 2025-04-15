@@ -12,7 +12,7 @@ export default function Topbar() {
   const isActive = (path: string) => pathname.startsWith(path);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full border-b z-50 bg-background">
+    <nav className="fixed top-0 left-0 right-0 w-full border-b z-50 bg-background px-4">
       <div className="h-20 flex items-center justify-between gap-4 mx-auto md:max-w-5xl">
         <div className="flex justify-between w-full md:w-fit md:justify-start items-center gap-4">
           <Logo />

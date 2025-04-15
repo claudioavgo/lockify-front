@@ -25,7 +25,7 @@ export default function PostsList({ posts }: PostsListProps) {
 
   return (
     <div className="w-full flex items-center justify-center py-20">
-      <div className="w-full xl:max-w-5xl">
+      <div className="w-full xl:max-w-5xl flex flex-col gap-6">
         <AnimatedGroup preset="scale" className="w-full">
           <PostCard
             key={featuredPost.slug}
