@@ -7,40 +7,37 @@ import { motion } from "motion/react";
 
 export default function Hero() {
   return (
-    <section className="w-full flex items-center justify-center py-16">
-      <div className="w-full flex flex-col gap-8 items-center justify-center px-6 py-10 xl:max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col gap-4 items-center justify-center"
-        >
+    <section className="w-full flex items-center justify-center py-20">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="w-full flex flex-col gap-12 items-center justify-center xl:max-w-5xl">
+        <div className="flex flex-col gap-4 items-center justify-center">
           <h1 className="text-6xl text-center font-bold font-serif">{config.public.hero.title}</h1>
           <p className="text-muted-foreground text-center text-xl w-3/5">{config.public.hero.description}</p>
-        </motion.div>
+        </div>
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-4 items-center justify-center"
         >
           <Button size="xl">Crie sua conta agora!</Button>
         </motion.div>
         <HeroImage />
-      </div>
-    </section>
+      </motion.div>
+    </section >
   );
 }
 
 const HeroImage = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative w-full h-96 rounded-xl overflow-hidden border"
-    >
+    <div className="relative w-full h-[30rem] rounded-xl overflow-hidden border">
       <Image alt="Background" src={"/image.png"} fill />
-    </motion.div>
+      <h1 className="text-4xl font-bold absolute inset-0 flex items-center justify-center p-4 text-white text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      </h1>
+    </div>
   );
 }

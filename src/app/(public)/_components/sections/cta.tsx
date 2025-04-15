@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section className="w-full flex items-center justify-center px-6 py-20">
+    <section className="w-full flex items-center justify-center py-20">
       <div className="bg-muted w-full xl:max-w-5xl border rounded-xl p-8 flex items-center justify-between relative overflow-hidden">
         <div className="absolute w-20 h-80 bg-primary/20 rounded-full -top-10 -left-10 blur-xl"></div>
         <div className="absolute w-60 h-60 bg-primary/15 rounded-full -bottom-20 -right-20 blur-xl"></div>

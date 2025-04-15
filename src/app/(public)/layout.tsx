@@ -1,5 +1,6 @@
-import Navbar from "./_components/navigation/navbar";
+import Topbar from "./_components/navigation/topbar";
 import Footer from "./_components/navigation/footer";
+
 export default function PublicLayout({
   children,
 }: {
@@ -7,8 +8,10 @@ export default function PublicLayout({
 }) {
   return (
     <div>
-      <Navbar />
-      {children}
+      <Topbar />
+      <main className="pt-32 px-4">
+        {children}
+      </main>
       <Footer />
     </div>
   );

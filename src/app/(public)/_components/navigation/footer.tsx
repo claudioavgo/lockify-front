@@ -9,8 +9,8 @@ import { ArrowUpIcon } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="flex items-start justify-center border-t">
-      <section className="flex flex-col gap-4 items-start justify-center w-full px-6 py-10 xl:max-w-5xl">
+    <footer className="w-full flex items-center justify-center px-4">
+      <section className="border-t py-10 flex flex-col gap-4 items-start justify-center w-full xl:max-w-5xl">
         <div className="flex flex-col gap-4 items-start justify-center">
           <Logo />
           <p className="text-sm text-muted-foreground w-80">{config.project.description}</p>

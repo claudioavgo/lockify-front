@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Bento() {
   return (
-    <section className="border-y w-full flex items-center justify-center px-6 py-14">
+    <section className="w-full flex items-center justify-center py-20">
       <div className="w-full gap-8 flex flex-col xl:max-w-5xl">
         <div className="flex flex-col gap-4">
           <h2 className="text-4xl font-bold">{config.public.bento.title}</h2>

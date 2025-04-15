@@ -6,13 +6,14 @@ import HamburgerSheet from "./hamburger-drawer";
 import { config } from "@/config";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/style/logo";
-export default function Navbar() {
+
+export default function Topbar() {
   const pathname = usePathname();
-  const isActive = (path: string) => pathname === path;
+  const isActive = (path: string) => pathname.startsWith(path);
 
   return (
-    <nav className="w-full border-b">
-      <div className="h-20 flex items-center justify-between gap-4 mx-auto md:max-w-5xl px-6">
+    <nav className="fixed top-0 left-0 right-0 w-full border-b z-50 bg-background">
+      <div className="h-20 flex items-center justify-between gap-4 mx-auto md:max-w-5xl">
         <div className="flex justify-between w-full md:w-fit md:justify-start items-center gap-4">
           <Logo />
           <HamburgerSheet />
