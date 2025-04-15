@@ -3,8 +3,8 @@ import { config } from "@/config";
 
 export default function FAQ() {
   return (
-    <section className="w-full flex flex-col gap-4 items-center justify-center">
-      <div className="w-full px-6 py-10 xl:max-w-5xl">
+    <section className="w-full flex items-center justify-center px-6 py-14">
+      <div className="w-full xl:max-w-5xl">
         <h2 className="text-4xl font-bold">Perguntas frequentes</h2>
         <Accordion type="single" collapsible className="w-full">
           {config.public.faq.map((faq, index) => (

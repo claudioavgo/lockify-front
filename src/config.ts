@@ -136,5 +136,52 @@ export const config = {
           "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
       },
     ],
+    bento: {
+      title: "Build the perfect customer-facing AI agent",
+      description:
+        "Chatbase gives you all the tools you need to train your perfect AI agent and connect it to your systems.",
+      items: [
+        {
+          title: "Como criar uma campanha",
+          description:
+            "Aprenda a criar uma campanha de forma simples e intuitiva",
+          href: "/blog/como-criar-uma-campanha",
+          image: "/image.png",
+        },
+        {
+          title: "Como criar uma campanha",
+          description:
+            "Aprenda a criar uma campanha de forma simples e intuitiva",
+          href: "/blog/como-criar-uma-campanha",
+          image: "/image.png",
+        },
+        {
+          title: "Como criar uma campanha",
+          description:
+            "Aprenda a criar uma campanha de forma simples e intuitiva",
+          href: "/blog/como-criar-uma-campanha",
+          image: "/image.png",
+        },
+        {
+          title: "Como criar uma campanha",
+          description:
+            "Aprenda a criar uma campanha de forma simples e intuitiva",
+          href: "/blog/como-criar-uma-campanha",
+          image: "/image.png",
+        },
+      ],
+    },
+    cta: {
+      title: "Crie sua campanha agora",
+      description: "Crie sua campanha de forma simples e intuitiva",
+      button: {
+        label: "Criar campanha",
+        href: "/pricing",
+      },
+    },
+    blog: {
+      title: "Últimas atualizações",
+      description: "Veja as últimas notícias e dicas do nossa comunidade",
+    },
   },
 };

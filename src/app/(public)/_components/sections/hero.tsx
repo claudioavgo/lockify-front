@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="border-b w-full flex items-center justify-center py-16">
+    <section className="w-full flex items-center justify-center py-16">
       <div className="w-full flex flex-col gap-8 items-center justify-center px-6 py-10 xl:max-w-5xl">
         <div className="flex flex-col gap-4 items-center justify-center">
           <h1 className="text-6xl text-center font-bold font-serif">{config.public.hero.title}</h1>
@@ -21,7 +21,7 @@ export default function Hero() {
 
 const HeroImage = () => {
   return (
-    <section className="relative w-full h-96 rounded-t-4xl overflow-hidden">
+    <section className="relative w-full h-96 rounded-4xl overflow-hidden">
       <Image alt="Background" src={"/image.png"} fill />
     </section>
   );
