@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import HamburgerSheet from "./hamburgerDrawer";
+import HamburgerSheet from "./hamburger-drawer";
 import { config } from "@/config";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/style/logo";

@@ -87,5 +87,27 @@ export const config = {
         },
       ],
     },
+    hero: {
+      title: "Love what you do and make money too",
+      description:
+        "Join all types of creators getting donations, memberships and sales from their fans!",
+    },
+    faq: [
+      {
+        question: "Como funciona o sistema?",
+        answer:
+          "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+      },
+      {
+        question: "Como funciona o sistema?",
+        answer:
+          "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+      },
+      {
+        question: "Como funciona o sistema?",
+        answer:
+          "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+      },
+    ],
   },
 };
