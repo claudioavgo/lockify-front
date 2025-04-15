@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <nav className="w-full border-b">
       <div className="h-20 flex items-center justify-between gap-4 mx-auto md:max-w-5xl px-6">
-        <div className="flex items-center gap-4">
+        <div className="flex justify-between w-full md:w-fit md:justify-start items-center gap-4">
           <Logo />
           <HamburgerSheet />
         </div>
@@ -24,7 +24,7 @@ export default function Navbar() {
             </Button>
           ))}
         </div>
-        <div className="flex gap-4">
+        <div className="md:flex gap-4 hidden">
           <Button size={"linkLg"} variant="link" asChild>
             <Link href="/login">Login</Link>
           </Button>

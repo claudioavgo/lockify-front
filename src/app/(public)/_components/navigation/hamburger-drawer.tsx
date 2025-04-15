@@ -38,11 +38,11 @@ export default function HamburgerDrawer() {
         <VisuallyHidden asChild>
           <DrawerTitle>Menu</DrawerTitle>
         </VisuallyHidden>
-        <div className="mx-auto w-full max-w-sm">
-          <div className="flex flex-col">
-            {config.public.navigation.navbarLinks.map((link) => (
+        <div className="mx-auto w-full max-w-sm px-4 py-10">
+          <div className="flex flex-col gap-4">
+            {config.public.navigation.drawerLinks.map((link) => (
               <DrawerClose asChild key={link.href}>
-                <Button className="justify-start text-md w-full h-20 border-b rounded-none" variant="sheetBtn" asChild>
+                <Button className="justify-start text-md w-full h-20" variant="outline" asChild>
                   <Link href={link.href}>
                     <link.icon className="size-8 p-2 bg-foreground/10 rounded-md" />
                     {link.label}
@@ -50,6 +50,14 @@ export default function HamburgerDrawer() {
                 </Button>
               </DrawerClose>
             ))}
+            <div className="flex flex-col gap-4">
+              <Button className="justify-start text-md w-full" size="xl" variant="default" asChild>
+                <Link href="/login">Login</Link>
+              </Button>
+              <Button className="justify-start text-md w-full" size="xl" variant="secondary" asChild>
+                <Link href="/register">Cadastrar</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </DrawerContent>

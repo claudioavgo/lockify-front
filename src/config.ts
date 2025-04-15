@@ -1,4 +1,9 @@
-import { CreditCardIcon, InfoIcon, HelpCircleIcon } from "lucide-react";
+import {
+  CreditCardIcon,
+  InfoIcon,
+  HelpCircleIcon,
+  HomeIcon,
+} from "lucide-react";
 
 export const config = {
   project: {
@@ -84,6 +89,28 @@ export const config = {
               href: "/twitter",
             },
           ],
+        },
+      ],
+      drawerLinks: [
+        {
+          icon: HomeIcon,
+          label: "Início",
+          href: "/",
+        },
+        {
+          icon: CreditCardIcon,
+          label: "Preços",
+          href: "/pricing",
+        },
+        {
+          icon: InfoIcon,
+          label: "Sobre",
+          href: "/about",
+        },
+        {
+          icon: HelpCircleIcon,
+          label: "Comunidade",
+          href: "/blog",
         },
       ],
     },
