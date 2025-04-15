@@ -1,22 +1,25 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import Image from "next/image";
 import HamburgerSheet from "./hamburgerDrawer";
 import { config } from "@/config";
-
+import { usePathname } from "next/navigation";
+import Logo from "@/components/style/logo";
 export default function Navbar() {
+  const pathname = usePathname();
+  const isActive = (path: string) => pathname === path;
+
   return (
     <nav className="w-full border-b">
-      <div className="h-20 flex items-center justify-between gap-4 mx-auto sm:max-w-5xl px-6">
+      <div className="h-20 flex items-center justify-between gap-4 mx-auto md:max-w-5xl px-6">
         <div className="flex items-center gap-4">
-          <Link href="/">
-            <Image src="/icon.svg" alt="Logo" width={50} height={50} />
-          </Link>
+          <Logo />
           <HamburgerSheet />
         </div>
-        <div className="sm:flex gap-4 hidden">
+        <div className="md:flex gap-4 hidden">
           {config.public.navigation.navbarLinks.map((link) => (
-            <Button variant="ghost" asChild key={link.href}>
+            <Button variant={isActive(link.href) ? "active" : "ghost"} asChild key={link.href}>
               <Link href={link.href}>{link.label}</Link>
             </Button>
           ))}
