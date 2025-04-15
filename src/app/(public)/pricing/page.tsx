@@ -1,6 +1,6 @@
 export default function Blog() {
   return (
-    <main className="">
+    <main className="h-screen">
     </main>
   );
 }
