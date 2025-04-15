@@ -1,3 +1,4 @@
+import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
 import { config } from "@/config";
 import Image from "next/image";
 
@@ -9,11 +10,11 @@ export default function Bento() {
           <h2 className="text-4xl font-bold">{config.public.bento.title}</h2>
           <p className="text-muted-foreground">{config.public.bento.description}</p>
         </div>
-        <div className="grid auto-rows-auto md:grid-cols-3 gap-4">
+        <AnimatedGroup preset="scale" className="grid auto-rows-auto md:grid-cols-3 gap-4">
           {config.public.bento.items.map((item, i) => (
             <BentoItem key={i} {...item} />
           ))}
-        </div>
+        </AnimatedGroup>
       </div>
     </section>
   );
