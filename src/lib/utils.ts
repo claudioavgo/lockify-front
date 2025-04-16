@@ -13,4 +13,11 @@ export class Sanitizer {
       year: "numeric",
     });
   }
+
+  static formatPrice(price: number) {
+    return price.toLocaleString("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+  }
 }

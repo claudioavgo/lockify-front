@@ -10,6 +10,45 @@ export const config = {
     name: "Campanhas",
     description:
       "Plataforma para você criar e gerenciar suas campanhas com segurança e praticidade",
+    prices: [
+      {
+        title: "Plano Básico",
+        description:
+          "Plano ideal para quem deseja criar e gerenciar campanhas com segurança e praticidade",
+        monthlyPrice: 10,
+        yearlyPrice: 100,
+        features: [
+          "100 campanhas",
+          "1000000 de visualizações",
+          "1000000 de cliques",
+        ],
+      },
+      {
+        title: "Plano Pro",
+        description:
+          "Plano ideal para quem deseja criar e gerenciar campanhas com segurança e praticidade",
+        monthlyPrice: 20,
+        yearlyPrice: 200,
+        features: [
+          "1000 campanhas",
+          "1000000 de visualizações",
+          "1000000 de cliques",
+        ],
+        recommended: true,
+      },
+      {
+        title: "Plano Enterprise",
+        description:
+          "Plano ideal para quem deseja criar e gerenciar campanhas com segurança e praticidade",
+        monthlyPrice: 30,
+        yearlyPrice: 300,
+        features: [
+          "10000 campanhas",
+          "10000000 de visualizações",
+          "10000000 de cliques",
+        ],
+      },
+    ],
   },
   public: {
     navigation: {
@@ -182,6 +221,10 @@ export const config = {
     blog: {
       title: "Últimas atualizações",
       description: "Veja as últimas notícias e dicas do nossa comunidade",
+    },
+    pricing: {
+      title: "Planos",
+      description: "Veja os planos disponíveis para você",
     },
   },
 };
