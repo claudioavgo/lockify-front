@@ -158,23 +158,38 @@ export const config = {
       description:
         "Join all types of creators getting donations, memberships and sales from their fans!",
     },
-    faq: [
-      {
-        question: "Como funciona o sistema?",
-        answer:
-          "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
-      },
-      {
-        question: "Como funciona o sistema?",
-        answer:
-          "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
-      },
-      {
-        question: "Como funciona o sistema?",
-        answer:
-          "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
-      },
-    ],
+    faq: {
+      title: "Perguntas frequentes",
+      description:
+        "Veja as perguntas frequentes sobre o sistema e como ele funciona",
+      items: [
+        {
+          question: "Como funciona o sistema?",
+          answer:
+            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+        },
+        {
+          question: "Como funciona o sistema?",
+          answer:
+            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+        },
+        {
+          question: "Como funciona o sistema?",
+          answer:
+            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+        },
+        {
+          question: "Como funciona o sistema?",
+          answer:
+            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+        },
+        {
+          question: "Como funciona o sistema?",
+          answer:
+            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+        },
+      ],
+    },
     bento: {
       title: "Build the perfect customer-facing AI agent",
       description:
@@ -225,6 +240,26 @@ export const config = {
     pricing: {
       title: "Planos",
       description: "Veja os planos disponíveis para você",
+    },
+    hiw: {
+      title: "Como funciona o sistema?",
+      description: "Veja como funciona o sistema e como ele funciona",
+      items: [
+        {
+          title: "Build & deploy your agent",
+          description:
+            "Train an agent on your business data, configure the actions it can take, then deploy it for your customers.",
+        },
+        {
+          title: "Agent solves your customers' problems ",
+          description:
+            "The agent will answer questions and access external systems to gather data and take actions.",
+        },
+        {
+          title: "Refine & optimize",
+          description: "This ensures your agent is improving over time.",
+        },
+      ],
     },
   },
 };

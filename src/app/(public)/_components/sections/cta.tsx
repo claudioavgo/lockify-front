@@ -11,8 +11,7 @@ export default function CTA() {
         <div className="absolute w-60 h-60 bg-primary/15 rounded-full -bottom-20 -right-20 blur-xl"></div>
         <div className="absolute w-80 h-80 bg-primary/25 rounded-full top-1/2 right-10 blur-lg"></div>
         <div className="flex flex-col gap-4 relative z-10">
-          <h2 className="text-4xl font-bold">{config.public.cta.title}</h2>
-          <p className="text-muted-foreground text-lg">{config.public.cta.description}</p>
+          <CTAHeader title={config.public.cta.title} description={config.public.cta.description} />
           <Button className="w-fit" size={"xl"} asChild>
             <Link href={config.public.cta.button.href}>{config.public.cta.button.label}</Link>
           </Button>
@@ -23,4 +22,13 @@ export default function CTA() {
       </div>
     </section>
   );
-} 
+}
+
+const CTAHeader = ({ title, description }: { title: string, description: string }) => {
+  return (
+    <div className="flex flex-col gap-2">
+      <h1 className="text-4xl font-bold">{title}</h1>
+      <p className="text-muted-foreground text-lg">{description}</p>
+    </div>
+  );
+}

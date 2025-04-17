@@ -6,10 +6,7 @@ export default function Bento() {
   return (
     <section className="w-full flex items-center justify-center py-20">
       <div className="w-full gap-8 flex flex-col xl:max-w-5xl">
-        <div className="flex flex-col gap-4">
-          <h2 className="text-4xl font-bold">{config.public.bento.title}</h2>
-          <p className="text-muted-foreground text-lg">{config.public.bento.description}</p>
-        </div>
+        <BentoHeader title={config.public.bento.title} description={config.public.bento.description} />
         <AnimatedGroup preset="scale" className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {config.public.bento.items.map((item, i) => (
             <BentoCard key={i} {...item} />
@@ -45,4 +42,13 @@ const BentoCard = ({ title, description, image }: RecursoItem) => {
       </div>
     </div>
   )
+}
+
+const BentoHeader = ({ title, description }: { title: string, description: string }) => {
+  return (
+    <div className="flex flex-col gap-2">
+      <h2 className="text-4xl font-bold">{title}</h2>
+      <p className="text-muted-foreground text-lg">{description}</p>
+    </div>
+  );
 }
