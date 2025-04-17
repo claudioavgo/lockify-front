@@ -249,15 +249,18 @@ export const config = {
           title: "Build & deploy your agent",
           description:
             "Train an agent on your business data, configure the actions it can take, then deploy it for your customers.",
+          image: "/bg.jpg",
         },
         {
           title: "Agent solves your customers' problems ",
           description:
             "The agent will answer questions and access external systems to gather data and take actions.",
+          image: "/hero.png",
         },
         {
           title: "Refine & optimize",
           description: "This ensures your agent is improving over time.",
+          image: "/image.png",
         },
       ],
     },
