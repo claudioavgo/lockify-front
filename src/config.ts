@@ -200,28 +200,28 @@ export const config = {
           description:
             "Aprenda a criar uma campanha de forma simples e intuitiva",
           href: "/blog/como-criar-uma-campanha",
-          image: "/image.png",
+          image: "/ocean.png",
         },
         {
           title: "Como criar uma campanha",
           description:
             "Aprenda a criar uma campanha de forma simples e intuitiva",
           href: "/blog/como-criar-uma-campanha",
-          image: "/image.png",
+          image: "/ocean.png",
         },
         {
           title: "Como criar uma campanha",
           description:
             "Aprenda a criar uma campanha de forma simples e intuitiva",
           href: "/blog/como-criar-uma-campanha",
-          image: "/image.png",
+          image: "/ocean.png",
         },
         {
           title: "Como criar uma campanha",
           description:
             "Aprenda a criar uma campanha de forma simples e intuitiva",
           href: "/blog/como-criar-uma-campanha",
-          image: "/image.png",
+          image: "/ocean.png",
         },
       ],
     },
@@ -260,7 +260,7 @@ export const config = {
         {
           title: "Refine & optimize",
           description: "This ensures your agent is improving over time.",
-          image: "/image.png",
+          image: "/ocean.png",
         },
       ],
     },
