@@ -51,12 +51,16 @@ export default function HamburgerDrawer() {
               </DrawerClose>
             ))}
             <div className="flex flex-col gap-2">
-              <Button className="justify-start text-md w-full" size="xl" variant="default" asChild>
-                <Link href="/login">Login</Link>
-              </Button>
-              <Button className="justify-start text-md w-full" size="xl" variant="secondary" asChild>
-                <Link href="/register">Cadastrar</Link>
-              </Button>
+              <DrawerClose asChild>
+                <Button className="justify-start text-md w-full" size="xl" variant="default" asChild>
+                  <Link href="/login">Login</Link>
+                </Button>
+              </DrawerClose>
+              <DrawerClose asChild>
+                <Button className="justify-start text-md w-full" size="xl" variant="secondary" asChild>
+                  <Link href="/register">Cadastrar</Link>
+                </Button>
+              </DrawerClose>
             </div>
           </div>
         </div>

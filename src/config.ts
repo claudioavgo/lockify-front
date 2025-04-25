@@ -264,5 +264,13 @@ export const config = {
         },
       ],
     },
+    login: {
+      title: "Bem-vindo de volta!",
+      description: "Insira suas informações abaixo para entrar na sua conta",
+    },
+    register: {
+      title: "Crie sua conta",
+      description: "Insira suas informações abaixo para criar uma conta",
+    },
   },
 };
