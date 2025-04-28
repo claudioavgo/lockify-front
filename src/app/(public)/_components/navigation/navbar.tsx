@@ -7,7 +7,7 @@ import { config } from "@/config";
 import { usePathname } from "next/navigation";
 import Logo from "@/components/style/logo";
 
-export default function Topbar() {
+export default function NavBar() {
   const pathname = usePathname();
   const isActive = (path: string) => pathname.startsWith(path);
 
@@ -26,10 +26,10 @@ export default function Topbar() {
           ))}
         </div>
         <div className="md:flex gap-4 hidden">
-          <Button size={"linkLg"} variant="link" asChild>
+          <Button size="lg" variant="link" asChild>
             <Link href="/login">Login</Link>
           </Button>
-          <Button size={"lg"} variant="default" asChild>
+          <Button size="lg" variant="default" asChild>
             <Link href="/register">Cadastrar</Link>
           </Button>
         </div>
