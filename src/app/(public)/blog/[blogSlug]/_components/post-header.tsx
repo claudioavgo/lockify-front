@@ -9,7 +9,7 @@ export default function PostHeader({ title, date }: PostHeaderProps) {
   return (
     <header className="mb-8">
       <h1 className="text-4xl font-bold mb-2">{title}</h1>
-      <time className="text-gray-500 block">{Sanitizer.formatDate(date)}</time>
+      <time className="text-muted-foreground block">{Sanitizer.formatDate(date)}</time>
     </header>
   );
 } 

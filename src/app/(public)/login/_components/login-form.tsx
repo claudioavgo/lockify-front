@@ -14,8 +14,11 @@ import { config } from "@/config";
 import Logo from "@/components/style/logo";
 import { Loader } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LoginForm() {
+  const router = useRouter();
+
   const form = useForm<LoginSchemaType>({
     resolver: zodResolver(LoginSchema),
     defaultValues: {
@@ -33,6 +36,7 @@ export default function LoginForm() {
         toast.error(data.message);
       } else {
         toast.success('Login realizado com sucesso!');
+        router.push('/dashboard');
       }
     },
     onError: () => {

@@ -27,8 +27,8 @@ export default function PostCard({ slug, title, date, description, image, featur
         )}
         <div className={`${featured ? 'md:w-1/2 md:pl-6 flex flex-col justify-start md:justify-start h-full' : ''}`}>
           <h2 className={`${featured ? 'text-3xl' : 'text-2xl'} font-bold transition-colors truncate`}>{title}</h2>
-          <p className={`text-gray-700 ${featured ? '' : 'truncate'} mt-2`}>{description}</p>
-          <time className="text-sm text-gray-500 mt-3 block">{Sanitizer.formatDate(date)}</time>
+          <p className={`text-muted-foreground ${featured ? '' : 'truncate'} mt-2`}>{description}</p>
+          <time className="text-sm text-muted-foreground mt-3 block">{Sanitizer.formatDate(date)}</time>
         </div>
       </article>
     </Link>
