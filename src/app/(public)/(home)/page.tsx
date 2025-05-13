@@ -6,7 +6,7 @@ import HIW from "./_components/sections/hiw";
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-full flex flex-col gap-20">
       <Hero />
       <Bento />
       <HIW />

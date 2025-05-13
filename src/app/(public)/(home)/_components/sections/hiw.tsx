@@ -13,23 +13,21 @@ export default function HIW() {
   }
 
   return (
-    <section className="w-full flex items-center justify-center py-20">
-      <div className="w-full h-full xl:max-w-5xl flex flex-col gap-8 ">
-        <HIWHeader title={config.public.hiw.title} description={config.public.hiw.description} />
-        <div className="flex flex-col md:flex-row gap-6">
-          <div className="flex flex-col gap-4 flex-1">
-            {config.public.hiw.items.map((item, index) => (
-              <HIWItem key={index} {...item} isActive={active === index} handleActive={handleActive} index={index} />
-            ))}
-          </div>
-          <div className="relative rounded-xl overflow-hidden aspect-square flex-1 min-h-[250px]">
-            <Image
-              src={config.public.hiw.items[active].image || "/bg.jpg"}
-              alt={config.public.hiw.items[active].title}
-              fill
-              className="object-cover transition-all duration-300"
-            />
-          </div>
+    <section className="w-full gap-8 flex flex-col">
+      <HIWHeader title={config.public.hiw.title} description={config.public.hiw.description} />
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col gap-4 flex-1">
+          {config.public.hiw.items.map((item, index) => (
+            <HIWItem key={index} {...item} isActive={active === index} handleActive={handleActive} index={index} />
+          ))}
+        </div>
+        <div className="relative rounded-xl overflow-hidden aspect-square flex-1 min-h-[250px]">
+          <Image
+            src={config.public.hiw.items[active].image || "/bg.jpg"}
+            alt={config.public.hiw.items[active].title}
+            fill
+            className="object-cover transition-all duration-300"
+          />
         </div>
       </div>
     </section>

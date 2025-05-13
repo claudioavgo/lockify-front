@@ -157,6 +157,15 @@ export const config = {
       title: "Love what you do and make money too",
       description:
         "Join all types of creators getting donations, memberships and sales from their fans!",
+      image: {
+        src: "/hero.png",
+        alt: "Hero image",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+      },
+      button: {
+        label: "Crie sua conta agora!",
+        href: "/pricing",
+      },
     },
     faq: {
       title: "Perguntas frequentes",

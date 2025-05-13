@@ -4,15 +4,13 @@ import Image from "next/image";
 
 export default function Bento() {
   return (
-    <section className="w-full flex items-center justify-center py-20">
-      <div className="w-full gap-8 flex flex-col xl:max-w-5xl">
-        <BentoHeader title={config.public.bento.title} description={config.public.bento.description} />
-        <AnimatedGroup preset="scale" className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {config.public.bento.items.map((item, i) => (
-            <BentoCard key={i} {...item} />
-          ))}
-        </AnimatedGroup>
-      </div>
+    <section className="w-full gap-8 flex flex-col">
+      <BentoHeader title={config.public.bento.title} description={config.public.bento.description} />
+      <AnimatedGroup preset="scale" className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {config.public.bento.items.map((item, i) => (
+          <BentoCard key={i} {...item} />
+        ))}
+      </AnimatedGroup>
     </section>
   );
 }

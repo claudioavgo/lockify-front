@@ -1,13 +1,14 @@
 "use client";
 
-import { config } from "@/config";
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
+import { config } from "@/config";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <section className="w-full flex items-center justify-center py-20">
+    <section className="w-full gap-8 flex flex-col">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -20,7 +21,9 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="flex flex-col gap-4 items-center justify-center"
         >
-          <Button size="xl">Crie sua conta agora!</Button>
+          <Button size="xl" asChild>
+            <Link href={config.public.hero.button.href}>{config.public.hero.button.label}</Link>
+          </Button>
         </motion.div>
         <HeroImage />
       </motion.div>
@@ -40,9 +43,9 @@ const HeroHeader = ({ title, description }: { title: string, description: string
 const HeroImage = () => {
   return (
     <div className="relative w-full h-[30rem] rounded-xl overflow-hidden border">
-      <Image alt="Background" src={"/image.png"} fill />
+      <Image alt="Background" src={config.public.hero.image.src} fill className="object-cover" />
       <h1 className="font-light text-4xl absolute inset-0 flex items-end justify-center p-4 text-white text-center">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+        {config.public.hero.image.text}
       </h1>
     </div>
   );
