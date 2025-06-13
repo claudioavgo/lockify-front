@@ -8,9 +8,9 @@ class Auth {
     return res.data;
   }
 
-  async register(params: { email: string; password: string; name: string }) {
+  async register(name: string, email: string, password: string) {
     const api = getApiClient();
-    const res = await api.post("/auth/register", params);
+    const res = await api.post("/auth/register", { name, email, password });
 
     return res.data;
   }

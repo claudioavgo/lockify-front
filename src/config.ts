@@ -278,7 +278,7 @@ export const config = {
     dashboard: {
       forms: {
         feedback: {
-          title: "Como foi seu dia?",
+          title: "como foi seu dia?",
           description: "Avalie seu dia e veja como melhorar amanhã.",
         },
       },

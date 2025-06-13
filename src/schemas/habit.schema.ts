@@ -19,6 +19,10 @@ export const HabitSchema = z.object({
 export const HabitFormSchema = z.object({
   name: z.string().min(1),
   description: z.string().min(1),
+  starts_at: z.string().min(1),
+  ends_at: z.string().min(1),
+  days_of_week: z.string().min(1),
+  no_end_date: z.boolean(),
 });
 
 export type HabitSchemaType = z.infer<typeof HabitSchema>;
