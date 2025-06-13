@@ -7,45 +7,43 @@ import {
 
 export const config = {
   project: {
-    name: "Campanhas",
+    name: "Lockify",
     description:
-      "Plataforma para você criar e gerenciar suas campanhas com segurança e praticidade",
+      "Gerencie sua rotina, saúde mental e treinos com praticidade e segurança",
     prices: [
       {
         title: "Plano Básico",
-        description:
-          "Plano ideal para quem deseja criar e gerenciar campanhas com segurança e praticidade",
+        description: "Ideal para começar sua jornada de bem-estar",
         monthlyPrice: 10,
         yearlyPrice: 100,
         features: [
-          "100 campanhas",
-          "1000000 de visualizações",
-          "1000000 de cliques",
+          "Acompanhamento de hábitos",
+          "Monitoramento de humor",
+          "Planos de treino básicos",
         ],
       },
       {
         title: "Plano Pro",
-        description:
-          "Plano ideal para quem deseja criar e gerenciar campanhas com segurança e praticidade",
+        description: "Para quem leva a sério sua saúde e bem-estar",
         monthlyPrice: 20,
         yearlyPrice: 200,
         features: [
-          "1000 campanhas",
-          "1000000 de visualizações",
-          "1000000 de cliques",
+          "Planos de treino avançados",
+          "Relatórios de progresso",
+          "Consultas com especialistas",
         ],
         recommended: true,
       },
       {
         title: "Plano Enterprise",
         description:
-          "Plano ideal para quem deseja criar e gerenciar campanhas com segurança e praticidade",
+          "Para empresas que cuidam do bem-estar de seus colaboradores",
         monthlyPrice: 30,
         yearlyPrice: 300,
         features: [
-          "10000 campanhas",
-          "10000000 de visualizações",
-          "10000000 de cliques",
+          "Programas personalizados",
+          "Workshops de saúde mental",
+          "Acesso a todos os recursos",
         ],
       },
     ],
@@ -55,7 +53,7 @@ export const config = {
       navbarLinks: [
         {
           icon: CreditCardIcon,
-          label: "Preços",
+          label: "Planos",
           href: "/pricing",
         },
         {
@@ -78,7 +76,7 @@ export const config = {
               href: "/",
             },
             {
-              label: "Preços  ",
+              label: "Planos",
               href: "/pricing",
             },
             {
@@ -138,7 +136,7 @@ export const config = {
         },
         {
           icon: CreditCardIcon,
-          label: "Preços",
+          label: "Planos",
           href: "/pricing",
         },
         {
@@ -154,140 +152,134 @@ export const config = {
       ],
     },
     hero: {
-      title: "Love what you do and make money too",
-      description:
-        "Join all types of creators getting donations, memberships and sales from their fans!",
+      title: "Transforme sua vida com Lockify",
+      description: "Cuide da mente e do corpo, tudo em um só lugar!",
       image: {
         src: "/hero.png",
-        alt: "Hero image",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.",
+        alt: "Imagem de destaque",
+        text: "Equilíbrio e saúde ao seu alcance.",
       },
       button: {
-        label: "Crie sua conta agora!",
+        label: "Comece agora!",
         href: "/pricing",
       },
     },
     faq: {
       title: "Perguntas frequentes",
-      description:
-        "Veja as perguntas frequentes sobre o sistema e como ele funciona",
+      description: "Dúvidas sobre como melhorar sua rotina?",
       items: [
         {
-          question: "Como funciona o sistema?",
+          question: "Como o Lockify pode ajudar?",
           answer:
-            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+            "Organize sua rotina, melhore seu humor e alcance seus objetivos de fitness.",
         },
         {
-          question: "Como funciona o sistema?",
+          question: "Como o Lockify pode ajudar?",
           answer:
-            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+            "Organize sua rotina, melhore seu humor e alcance seus objetivos de fitness.",
         },
         {
-          question: "Como funciona o sistema?",
+          question: "Como o Lockify pode ajudar?",
           answer:
-            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+            "Organize sua rotina, melhore seu humor e alcance seus objetivos de fitness.",
         },
         {
-          question: "Como funciona o sistema?",
+          question: "Como o Lockify pode ajudar?",
           answer:
-            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+            "Organize sua rotina, melhore seu humor e alcance seus objetivos de fitness.",
         },
         {
-          question: "Como funciona o sistema?",
+          question: "Como o Lockify pode ajudar?",
           answer:
-            "O sistema funciona de forma simples e intuitiva, você pode criar campanhas, gerenciar campanhas e visualizar campanhas.",
+            "Organize sua rotina, melhore seu humor e alcance seus objetivos de fitness.",
         },
       ],
     },
     bento: {
-      title: "Build the perfect customer-facing AI agent",
+      title: "Construa seu agente de bem-estar",
       description:
-        "Chatbase gives you all the tools you need to train your perfect AI agent and connect it to your systems.",
+        "Lockify oferece as ferramentas para você cuidar da sua saúde mental e física.",
       items: [
         {
-          title: "Como criar uma campanha",
-          description:
-            "Aprenda a criar uma campanha de forma simples e intuitiva",
-          href: "/blog/como-criar-uma-campanha",
+          title: "Como melhorar sua rotina",
+          description: "Dicas práticas para um dia a dia mais saudável",
+          href: "/blog/como-melhorar-sua-rotina",
           image: "/ocean.png",
         },
         {
-          title: "Como criar uma campanha",
-          description:
-            "Aprenda a criar uma campanha de forma simples e intuitiva",
-          href: "/blog/como-criar-uma-campanha",
+          title: "Como melhorar sua rotina",
+          description: "Dicas práticas para um dia a dia mais saudável",
+          href: "/blog/como-melhorar-sua-rotina",
           image: "/ocean.png",
         },
         {
-          title: "Como criar uma campanha",
-          description:
-            "Aprenda a criar uma campanha de forma simples e intuitiva",
-          href: "/blog/como-criar-uma-campanha",
+          title: "Como melhorar sua rotina",
+          description: "Dicas práticas para um dia a dia mais saudável",
+          href: "/blog/como-melhorar-sua-rotina",
           image: "/ocean.png",
         },
         {
-          title: "Como criar uma campanha",
-          description:
-            "Aprenda a criar uma campanha de forma simples e intuitiva",
-          href: "/blog/como-criar-uma-campanha",
+          title: "Como melhorar sua rotina",
+          description: "Dicas práticas para um dia a dia mais saudável",
+          href: "/blog/como-melhorar-sua-rotina",
           image: "/ocean.png",
         },
       ],
     },
     cta: {
-      title: "Crie sua campanha agora",
-      description: "Crie sua campanha de forma simples e intuitiva",
+      title: "Inicie sua jornada de bem-estar",
+      description: "Transforme sua vida com hábitos saudáveis",
       button: {
-        label: "Criar campanha",
+        label: "Comece agora",
         href: "/pricing",
       },
     },
     blog: {
-      title: "Últimas atualizações",
-      description: "Veja as últimas notícias e dicas do nossa comunidade",
+      title: "Novidades e dicas",
+      description:
+        "Fique por dentro das últimas tendências de saúde e bem-estar",
     },
     pricing: {
       title: "Planos",
-      description: "Veja os planos disponíveis para você",
+      description: "Escolha o plano que melhor se adapta a você",
     },
     hiw: {
-      title: "Como funciona o sistema?",
-      description: "Veja como funciona o sistema e como ele funciona",
+      title: "Como o Lockify funciona?",
+      description: "Descubra como o Lockify pode transformar sua rotina",
       items: [
         {
-          title: "Build & deploy your agent",
+          title: "Configure e alcance suas metas",
           description:
-            "Train an agent on your business data, configure the actions it can take, then deploy it for your customers.",
+            "Defina objetivos e acompanhe seu progresso diariamente.",
           image: "/bg.jpg",
         },
         {
-          title: "Agent solves your customers' problems ",
-          description:
-            "The agent will answer questions and access external systems to gather data and take actions.",
+          title: "Suporte para sua saúde mental",
+          description: "Acompanhe seu humor e receba dicas personalizadas.",
           image: "/hero.png",
         },
         {
-          title: "Refine & optimize",
-          description: "This ensures your agent is improving over time.",
+          title: "Aprimore continuamente",
+          description: "Melhore sua rotina com feedbacks e ajustes constantes.",
           image: "/ocean.png",
         },
       ],
     },
     login: {
       title: "Bem-vindo de volta!",
-      description: "Insira suas informações abaixo para entrar na sua conta",
+      description: "Acesse sua conta e continue sua jornada de bem-estar",
     },
     register: {
       title: "Crie sua conta",
-      description: "Insira suas informações abaixo para criar uma conta",
+      description: "Junte-se a nós e transforme sua vida",
     },
   },
   protected: {
     dashboard: {
       forms: {
         feedback: {
-          title: "avalie seu dia.",
-          description: "Através de uma nota de 1 a 5, avalie o seu dia.",
+          title: "Como foi seu dia?",
+          description: "Avalie seu dia e veja como melhorar amanhã.",
         },
       },
     },

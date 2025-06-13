@@ -7,7 +7,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/me`, {
+  const res = await fetch(`${process.env.BACKEND_API_BASE_URL}/me`, {
     headers: { Cookie: cookies.toString() },
     credentials: "include",
   });

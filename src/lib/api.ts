@@ -8,7 +8,7 @@ export type ApiResponse<T> = {
 
 export function getApiClient(req?: IncomingMessage) {
   const instance = axios.create({
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
+    baseURL: process.env.BACKEND_API_BASE_URL,
     withCredentials: true,
   });
 
