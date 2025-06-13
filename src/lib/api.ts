@@ -6,9 +6,13 @@ export type ApiResponse<T> = {
   error?: string;
 };
 
+const getBaseUrl = () => {
+  return process.env.NEXT_PUBLIC_API_URL;
+};
+
 export function getApiClient(req?: IncomingMessage) {
   const instance = axios.create({
-    baseURL: process.env.BACKEND_API_BASE_URL,
+    baseURL: getBaseUrl(),
     withCredentials: true,
   });
 
