@@ -282,4 +282,14 @@ export const config = {
       description: "Insira suas informações abaixo para criar uma conta",
     },
   },
+  protected: {
+    dashboard: {
+      forms: {
+        feedback: {
+          title: "avalie seu dia.",
+          description: "Através de uma nota de 1 a 5, avalie o seu dia.",
+        },
+      },
+    },
+  },
 };

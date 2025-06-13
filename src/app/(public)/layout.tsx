@@ -3,9 +3,9 @@ import Footer from "./_components/navigation/footer";
 
 export default function PublicLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <div className="w-full flex flex-col justify-center items-center select-none">
       <NavBar />

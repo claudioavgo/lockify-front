@@ -1,4 +1,4 @@
-import { Auth } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import { UserType } from "@/schemas/user.schema";
 import { useEffect, useState } from "react";
 
@@ -11,9 +11,9 @@ export const useAuth = () => {
     const getUser = async () => {
       setIsAuthenticated(true);
 
-      const user = await Auth.getUser();
+      const session = await auth.getSession();
 
-      setUser(user);
+      setUser(session);
       setLoading(false);
     };
 

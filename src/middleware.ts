@@ -1,16 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Auth } from "./lib/auth";
 
 export async function middleware(request: NextRequest) {
-  const token = request.cookies.get("token")?.value;
+  const cookies = request.cookies;
 
-  if (!token) {
+  if (!cookies) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
-  const user = await Auth.getSession(token);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/me`, {
+    headers: { Cookie: cookies.toString() },
+    credentials: "include",
+  });
 
-  if (!user) {
+  if (!res.ok) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 

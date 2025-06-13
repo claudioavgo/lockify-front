@@ -1,9 +1,8 @@
 "use client";
 
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
-import { Auth } from "@/lib/auth";
-import { LoginSchema } from "@/schemas/login.schema";
-import { LoginSchemaType } from "@/schemas/login.schema";
+import { auth } from "@/lib/auth";
+import { LoginSchema, LoginSchemaType } from "@/schemas/login.schema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
@@ -29,7 +28,7 @@ export default function LoginForm() {
 
   const { mutateAsync, isPending } = useMutation({
     mutationFn: async (data: LoginSchemaType) => {
-      return await Auth.login(data.email, data.password);
+      return await auth.login(data.email, data.password);
     },
     onSuccess: (data) => {
       if (data.status === 'error') {

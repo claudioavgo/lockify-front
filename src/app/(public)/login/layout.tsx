@@ -16,9 +16,9 @@ const queryClient = new QueryClient({
 
 export default function LoginLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <QueryClientProvider client={queryClient}>
       <div>
