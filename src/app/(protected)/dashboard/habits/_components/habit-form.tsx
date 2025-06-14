@@ -99,33 +99,34 @@ export default function HabitForm() {
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
-        <Button variant="outline" size="lg" className="fixed bottom-24 right-8">
+        <Button variant="outline" size="xl" className="fixed bottom-24 right-8">
           Adicionar Hábito
         </Button>
       </SheetTrigger>
-      <SheetContent className="dark text-foreground w-full">
+      <SheetContent className="dark text-foreground w-full text-xl">
         <SheetHeader>
-          <SheetTitle>Adicionar Hábito</SheetTitle>
-          <SheetDescription>
+          <SheetTitle className="text-2xl">Adicionar Hábito</SheetTitle>
+          <SheetDescription className="text-lg">
             Adicione um novo hábito para sua rotina.
           </SheetDescription>
         </SheetHeader>
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-4">
           <div className="grid flex-1 auto-rows-min gap-6 px-4">
             <div className="grid gap-3">
-              <Label htmlFor="name">Nome</Label>
+              <Label className="text-lg" htmlFor="name">Nome</Label>
               <Input id="name" {...form.register("name")} />
             </div>
             <div className="grid gap-3">
-              <Label htmlFor="description">Descrição</Label>
+              <Label className="text-lg" htmlFor="description">Descrição</Label>
               <Input id="description" {...form.register("description")} />
             </div>
             <div className="grid gap-3">
-              <Label>Dias da Semana</Label>
+              <Label className="text-lg">Dias da Semana</Label>
               <div className="flex flex-wrap gap-4">
                 {weekDays.map((day) => (
                   <div key={day.value} className="flex items-center space-x-2">
                     <Checkbox
+                      className="size-6"
                       id={day.value}
                       checked={selectedDays.includes(day.value)}
                       onCheckedChange={() => {
@@ -143,11 +144,11 @@ export default function HabitForm() {
             </div>
           </div>
           <SheetFooter>
-            <Button type="submit" disabled={isPending || !form.formState.isValid}>
+            <Button type="submit" size="xl" disabled={isPending || !form.formState.isValid}>
               {isPending ? "Salvando..." : "Salvar"}
             </Button>
             <SheetClose asChild>
-              <Button variant="outline">Cancelar</Button>
+              <Button variant="outline" size="xl">Cancelar</Button>
             </SheetClose>
           </SheetFooter>
         </form>

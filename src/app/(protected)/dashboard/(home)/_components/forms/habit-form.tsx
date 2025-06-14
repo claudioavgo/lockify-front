@@ -5,7 +5,7 @@ import { toast } from "sonner";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { HabitSchemaType } from "@/schemas/habit.schema";
 import { CheckInHabit } from "@/data/habits.data";
-import { Button } from "@/components/ui/button";
+import { motion, useMotionValue, useTransform, PanInfo } from "framer-motion";
 
 interface HabitFormProps {
   habit: HabitSchemaType;
@@ -13,6 +13,9 @@ interface HabitFormProps {
 
 export default function HabitForm({ habit }: Readonly<HabitFormProps>) {
   const queryClient = useQueryClient();
+  const x = useMotionValue(0);
+  const rotate = useTransform(x, [-200, 200], [-30, 30]);
+  const opacity = useTransform(x, [-200, 0, 200], [0, 1, 0]);
 
   const { mutateAsync } = useMutation({
     mutationFn: async (habitId: number) => {
@@ -37,17 +40,29 @@ export default function HabitForm({ habit }: Readonly<HabitFormProps>) {
     });
   }
 
+  const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    if (info.offset.x > 100) {
+      onSubmit();
+    }
+    x.set(0);
+  };
+
   return (
-    <section className="w-full flex items-center justify-center py-20">
+    <section className="w-full flex flex-col items-center justify-center py-20 gap-8">
       <AnimatedGroup preset="slide" className="w-full xl:max-w-md flex flex-col gap-8">
-        <FeedbackHeader name={habit.name} description={habit.description} />
-        <form className="flex flex-col gap-4" onSubmit={onSubmit}>
-          <div className="flex items-center justify-center gap-4">
-            <Button onClick={onSubmit} type="button" size="lg">Feito</Button>
-          </div>
-        </form>
+        <motion.div
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          style={{ x, rotate, opacity }}
+          onDragEnd={handleDragEnd}
+          className="w-full bg-card rounded-lg p-16 shadow-lg cursor-grab active:cursor-grabbing"
+        >
+          <FeedbackHeader name={habit.name} description={habit.description} />
+
+        </motion.div>
       </AnimatedGroup>
-    </section >
+      <p className="text-center text-sm text-muted-foreground/40">Arraste para a direita para marcar como feito</p>
+    </section>
   );
 }
 
@@ -58,11 +73,11 @@ interface FeedbackHeaderProps {
 
 const FeedbackHeader = ({ name, description }: FeedbackHeaderProps) => {
   return (
-    <div className="flex flex-col gap-2 text-center">
-      <h1 className="text-2xl font-bold">
+    <div className="flex flex-col text-center">
+      <h1 className="text-3xl font-bold truncate">
         {name}
       </h1>
-      <p className="text-sm text-muted-foreground">
+      <p className="text-xl text-muted-foreground truncate">
         {description}
       </p>
     </div>
