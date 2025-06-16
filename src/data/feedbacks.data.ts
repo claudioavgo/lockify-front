@@ -21,9 +21,15 @@ export async function isDailyFeedbackCompleted(): Promise<boolean> {
 
   if (feedbacks) {
     const lastFeedback = feedbacks.filter((feedback) => {
-      const feedbackDate = new Date(feedback.createdAt);
-      return feedbackDate.toDateString() >= new Date().toDateString();
+      const createdAt = new Date(feedback.created_at);
+      const now = new Date();
+
+      console.log("Date", now.toDateString());
+      console.log("CreatedAt", createdAt.toDateString());
+      return createdAt.toDateString() >= now.toDateString();
     });
+
+    console.log("lastFeedback", lastFeedback);
 
     return lastFeedback.length > 0;
   }

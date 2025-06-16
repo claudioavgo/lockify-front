@@ -3,9 +3,9 @@ import { z } from "zod";
 export const FeedbackSchema = z.object({
   id: z.number(),
   rating: z.number(),
-  createdAt: z.string(),
-  updatedAt: z.string(),
-  userId: z.string(),
+  created_at: z.string(),
+  updated_at: z.string(),
+  user_id: z.number(),
 });
 
 export const FeedbackFormSchema = z.object({

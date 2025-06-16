@@ -63,7 +63,7 @@ interface FeedbackRatingBallProps {
 
 const FeedbackRatingBall = ({ rating, onClick }: FeedbackRatingBallProps) => {
   return (
-    <button className="w-10 h-10 bg-card rounded-full flex items-center justify-center" onClick={onClick}>
+    <button className="w-10 h-10 bg-card rounded-full flex items-center justify-center cursor-pointer" onClick={onClick}>
       {rating}
     </button>
   )
